@@ -25,13 +25,12 @@
           <div class="col-12">
             <div class="card mt-4">
               <div class="card-body">
-                <h4 class="card-title">What's Your Royal Name?</h4>
-                <p class="card-text">Let's find out!</p>
+                <h4 class="card-title mt-3 mb-4">What's Your Royal Name?</h4>
 
                 <form>
 
                   <!-- GENDER -->
-                  <div class="container-fluid mb-3">
+                  <div class="container-fluid box mb-3">
                     <div class="row bg-light p-2">
                       <div class="col-12 form-check mb-2">
                         <input
@@ -60,7 +59,7 @@
                   </div>
 
                   <!-- AGE -->
-                  <div class="container-fluid mb-3">
+                  <div class="container-fluid box mb-3">
                     <div class="row bg-light p-2">
                       <div class="col-12">
                         <label for="age" class="form-label">Age</label>
@@ -73,8 +72,10 @@
                     </div>
                   </div>
 
+
+
                   <!-- NAME -->
-                  <div class="container-fluid mb-3">
+                  <div class="container-fluid box mb-3">
                     <div class="row bg-light p-2">
                       <div class="col-12 mb-3">
                         <label for="name" class="form-label">
@@ -86,16 +87,22 @@
                           id="name"
                         />
                       </div>
+                    </div>
+                  </div>
 
-                      <!-- BIRTHSTONE -->
-                      <div class="col-12">
-                        <label
-                          for="q1"
+
+
+                  <!-- BIRTHSTONE -->
+                <div class="container-fluid box 75">
+                  <div class="row bg-light p-2">
+                    <div class="col-12 mb-3">
+                    <label
+                          for="birthstone"
                           class="form-label fw-semibold"
                         >
                           Birthstone
                         </label>
-                        <select id="q1" class="form-select">
+                        <select id="birthstone" class="form-select">
                           <option value="">Choose</option>
                           <option value="garnet">Garnet</option>
                           <option value="amethyst">Amethyst</option>
@@ -112,13 +119,58 @@
                         </select>
                       </div>
                     </div>
+                    </div>
+                  
+
+
+
+                  <!-- MUSIC -->
+                <div class="container-fluid box mb-3">
+                  <div class="row bg-light p-2">
+                    <div class="col-12 mb-3">
+                    <label
+                          for="music"
+                          class="form-label fw-semibold"
+                        >
+                          Favorite Music Genre
+                        </label>
+                        <select id="music" class="form-select">
+                          <option value="">Choose</option>
+                          <option value="rock">Rock</option>
+                          <option value="pop">Pop</option>
+                          <option value="country">Country</option>
+                          <option value="rap">Rap</option>
+                          <option value="classical">Classical</option>
+                        </select>
+                      </div>
+                    </div>
+                    </div>
+                  
+                  
+                     <!-- TOWN -->
+                  <div class="container-fluid box mb-3">
+                    <div class="row bg-light p-2">
+                      <div class="col-12 mb-3">
+                        <label for="town" class="form-label">
+                          Town You Live In
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="town"
+                        />
+                      </div>
+                    </div>
                   </div>
 
-                  <button
+
+
+
+                  <button onclick="generatename()"
                     type="submit"
                     class="btn btn-light mt-4"
                   >
-                    Submit
+                    Generate
                   </button>
 
                 </form>
