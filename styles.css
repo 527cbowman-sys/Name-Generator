@@ -6,11 +6,18 @@ body {
     background-image: url("gold.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 25px;
+    transition: all 1s ease 0s;
+}
+
+.card:hover {
+    transition: all 1s ease 0s;
+    box-shadow: 15px 15px 15px #ffc400;
 }
 
 .card-title {
     font-family: "la-parisienne-script-regular", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 400%;
     text-align: center
@@ -19,4 +26,29 @@ body {
 .box {
     border: 6px solid #1b1127;
     border-radius: 25px;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    font-family: "la-parisienne-script-regular", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 180%;
+    color:#ffffff;
+    background-color:#473064;
+    border-radius: 25px;
+    border: 2px solid white;
+    transition: all 1s ease 0s;
+}
+.btn:hover {
+    transition: all 1s ease 0s;
+    color:#ffffff;
+    background-color:#473064;
+    box-shadow: 
+    0 0 10px #ffc400,
+    0 0 20px #ffc400,
+    0 0 30px #ffc400;
 }

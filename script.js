@@ -1,122 +1,131 @@
+
+const userName = document.getElementById("userName").value;
+const age = document.getElementById("age").value;
+const genderMale = document.getElementById("genderMale").value;
+const genderFemale = document.getElementById("genderFemale").value;
+const birthstone = document.getElementById("birthstone").value;
+const music = document.getElementById("music").value;
+const town = document.getElementById("town").value;
+
+
+let prefix = "";
+let firstName = "";
+let middleName = "";
+let lastName = "";
+let suffix = "";
+
 function generateName() {
-    const name = document.getElementById("name").value;
-    const age = document.getElementById("age").value;
-    const gender =
-        document.getElementById("genderMale").value;
-    document.getElementById("genderFemale").value;
-    const birthstone = document.getElementById("birthstone").value;
-    const music = document.getElementById("music").value;
-    const town = document.getElementById("town").value;
-    let Prefix = "";
-    let FirstName = "";
-    let MiddleName = "";
-    let LastName = "";
-    let Suffix = "";
-
-
-    getPrefix(gender, age);
-    getFirstName(gender, name);
+    getPrefix(genderMale, genderFemale, age);
+    getFirstName(gender, firstName);
     getMiddleName(birthstone);
     getLastName(music);
     getSuffix(town);
-
-
-
-    document.getElementById("result").innerText = `Your royal name is: ${Prefix} ${FirstName} ${MiddleName} ${LastName} of ${Suffix}`;
+    console.log(`Your royal name is: ${Prefix} ${FirstName} ${MiddleName} ${LastName} of ${Suffix}`);
 }
 
-function getPrefix(gender, age) {
+function getPrefix(genderMale, genderFemale, age) {
 
-    if (gender === "female" && age < 30) {
-        prefix = "Princess";
-    } else if (gender === "female" && age >= 30) {
-        prefix = "Queen";
-    } else if (gender === "male" && age < 30) {
-        prefix = "Prince";
-    } else if (gender === "male" && age >= 30) {
-        prefix = "King";
+    if (genderFemale === "true" && age < 30) {
+        Prefix = "Princess";
+    } else if (genderFemale === "true" && age >= 30) {
+        Prefix = "Queen";
+    } else if (genderMale === "true" && age < 30) {
+        Prefix = "Prince";
+    } else if (genderMale === "true" && age >= 30) {
+        Prefix = "King";
     }
 
 }
 
 function getFirstName() {
-    let firstLetter = Name.charAt(0);
+    let firstLetter = firstName.charAt(0);
 
-    if (gender === "Girl") {
+    if (genderFemale === "true") {
         switch (firstLetter) {
-            case "A": newName = "Aurora"; break;
-            case "B": newName = "Brielle"; break;
-            case "C": newName = "Celestia"; break;
-            case "D": newName = "Delphine"; break;
-            case "E": newName = "Eliana"; break;
-            case "F": newName = "Fiona"; break;
-            case "G": newName = "Genevieve"; break;
-            case "H": newName = "Helena"; break;
-            case "I": newName = "Isabella"; break;
-            case "J": newName = "Juliette"; break;
-            case "K": newName = "Keya"; break;
-            case "L": newName = "Liliana"; break;
-            case "M": newName = "Mirabelle"; break;
-            case "N": newName = "Nicolette"; break;
-            case "O": newName = "Octavia"; break;
-            case "P": newName = "Penelope"; break;
-            case "R": newName = "Rosalie"; break;
-            case "S": newName = "Serephina"; break;
-            case "T": newName = "Talia"; break;
-            case "V": newName = "Valeria"; break;
-            case "W": newName = "Willow"; break;
-            default: newName = "Elizabeth"; break;
+            case "B": FirstName = "Brielle"; break;
+            case "C": FirstName = "Celestia"; break;
+            case "D": FirstName = "Delphine"; break;
+            case "A": FirstName = "Aurora"; break;
+            case "E": FirstName = "Eliana"; break;
+            case "F": FirstName = "Fiona"; break;
+            case "G": FirstName = "Genevieve"; break;
+            case "H": FirstName = "Helena"; break;
+            case "I": FirstName = "Isabella"; break;
+            case "J": FirstName = "Juliette"; break;
+            case "K": FirstName = "Keya"; break;
+            case "L": FirstName = "Liliana"; break;
+            case "M": FirstName = "Mirabelle"; break;
+            case "N": FirstName = "Nicolette"; break;
+            case "O": FirstName = "Octavia"; break;
+            case "P": FirstName = "Penelope"; break;
+            case "R": FirstName = "Rosalie"; break;
+            case "S": FirstName = "Serephina"; break;
+            case "T": FirstName = "Talia"; break;
+            case "V": FirstName = "Valeria"; break;
+            case "W": FirstName = "Willow"; break;
+            default: FirstName = "Elizabeth"; break;
         }
+
     }
 
-    if (gender === "Boy") {
+    if (genderMale === "true") {
         switch (firstLetter) {
-            case "A": newName = "Alaric"; break;
-            case "B": newName = "Benedict"; break;
-            case "C": newName = "Cassian"; break;
-            case "D": newName = "Dorian"; break;
-            case "E": newName = "Elias"; break;
-            case "F": newName = "Felix"; break;
-            case "G": newName = "Gideon"; break;
-            case "H": newName = "Hadrian"; break;
-            case "I": newName = "Iskander"; break;
-            case "J": newName = "Julian"; break;
-            case "K": newName = "Kaelan"; break;
-            case "L": newName = "Lucien"; break;
-            case "M": newName = "Matthias"; break;
-            case "N": newName = "Nikolai"; break;
-            case "O": newName = "Orion"; break;
-            case "P": newName = "Percival"; break;
-            case "R": newName = "Rowan"; break;
-            case "S": newName = "Sebastian"; break;
-            case "T": newName = "Theodore"; break;
-            case "V": newName = "Valentin"; break;
-            case "W": newName = "William"; break;
-            default: newName = "Henry"; break;
+            case "A": FirstName = "Alaric"; break;
+            case "B": FirstName = "Benedict"; break;
+            case "C": FirstName = "Cassian"; break;
+            case "D": FirstName = "Dorian"; break;
+            case "E": FirstName = "Elias"; break;
+            case "F": FirstName = "Felix"; break;
+            case "G": FirstName = "Gideon"; break;
+            case "H": FirstName = "Hadrian"; break;
+            case "I": FirstName = "Iskander"; break;
+            case "J": FirstName = "Julian"; break;
+            case "K": FirstName = "Kaelan"; break;
+            case "L": FirstName = "Lucien"; break;
+            case "M": FirstName = "Matthias"; break;
+            case "N": FirstName = "Nikolai"; break;
+            case "O": FirstName = "Orion"; break;
+            case "P": FirstName = "Percival"; break;
+            case "R": FirstName = "Rowan"; break;
+            case "S": FirstName = "Sebastian"; break;
+            case "T": FirstName = "Theodore"; break;
+            case "V": FirstName = "Valentin"; break;
+            case "W": FirstName = "William"; break;
+            default: FirstName = "Henry"; break;
         }
     }
 }
 
 
-
-switch (music) {
-    case "Rock":
-        middleName = "Blackthorne";
-        break;
-
-    case "Pop":
-        middleName = "Starling";
-        break;
-
-    case "Country":
-        middleName = "Hawthorne";
-        break;
-
-    case "Rap":
-        middleName = "Noblehart";
-        break;
-
-    case "Classical":
-        middleName = "Montclair";
-        break;
+function getLastName(music) {
+    switch (music) {
+        case "Rock": LastName = "Blackthorne"; break;
+        case "Pop": LastName = "Starling"; break;
+        case "Country": LastName = "Hawthorne"; break;
+        case "Rap": LastName = "Noblehart"; break;
+        case "Classical": LastName = "Montclair"; break;
+        default: LastName = "Silverlake";
+    }
 }
+
+function getMiddleName(birthstone) {
+    switch (birthstone) {
+        case "Garnet": MiddleName = "Garnet"; break;
+        case "Amethyst": MiddleName = "Amethyst"; break;
+        case "Aquamarine": MiddleName = "Aquamarine"; break;
+        case "Diamond": MiddleName = "Diamond"; break;
+        case "Emerald": MiddleName = "Emerald"; break;
+        case "Pearl": MiddleName = "Pearl"; break;
+        case "Ruby": MiddleName = "Ruby"; break;
+        case "Peridot": MiddleName = "Peridot"; break;
+        case "Sapphire": MiddleName = "Sapphire"; break;
+        case "Opal": MiddleName = "Opal"; break;
+        case "Topaz": MiddleName = "Topaz"; break;
+        case "Turquoise": MiddleName = "Turquoise"; break;
+    }
+}
+
+
+    function getSuffix(town) {
+        Suffix = town;
+    }

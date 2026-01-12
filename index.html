@@ -28,7 +28,6 @@
                 <h4 class="card-title mt-3 mb-4">What's Your Royal Name?</h4>
 
                 <form>
-
                   <!-- GENDER -->
                   <div class="container-fluid box mb-3">
                     <div class="row bg-light p-2">
@@ -39,7 +38,7 @@
                           name="gender"
                           id="genderMale"
                         />
-                        <label class="form-check-label" for="genderMale">
+                        <label class="form-check-label" for="genderMale" value="true">
                           Male
                         </label>
                       </div>
@@ -51,7 +50,7 @@
                           name="gender"
                           id="genderFemale"
                         />
-                        <label class="form-check-label" for="genderFemale">
+                        <label class="form-check-label" for="genderFemale" value="true">
                           Female
                         </label>
                       </div>
@@ -63,43 +62,26 @@
                     <div class="row bg-light p-2">
                       <div class="col-12">
                         <label for="age" class="form-label">Age</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="age"
-                        />
+                        <input type="number" class="form-control" id="age" />
                       </div>
                     </div>
                   </div>
-
-
 
                   <!-- NAME -->
                   <div class="container-fluid box mb-3">
                     <div class="row bg-light p-2">
                       <div class="col-12 mb-3">
-                        <label for="name" class="form-label">
-                          Your Name
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                        />
+                        <label for="firstName" class="form-label"> Your Name </label>
+                        <input type="text" class="form-control" id="firstName" />
                       </div>
                     </div>
                   </div>
 
-
-
                   <!-- BIRTHSTONE -->
-                <div class="container-fluid box 75">
-                  <div class="row bg-light p-2">
-                    <div class="col-12 mb-3">
-                    <label
-                          for="birthstone"
-                          class="form-label fw-semibold"
-                        >
+                  <div class="container-fluid box mb-3">
+                    <div class="row bg-light p-2">
+                      <div class="col-12 mb-3">
+                        <label for="birthstone" class="form-label fw-semibold">
                           Birthstone
                         </label>
                         <select id="birthstone" class="form-select">
@@ -119,19 +101,13 @@
                         </select>
                       </div>
                     </div>
-                    </div>
-                  
-
-
+                  </div>
 
                   <!-- MUSIC -->
-                <div class="container-fluid box mb-3">
-                  <div class="row bg-light p-2">
-                    <div class="col-12 mb-3">
-                    <label
-                          for="music"
-                          class="form-label fw-semibold"
-                        >
+                  <div class="container-fluid box mb-3">
+                    <div class="row bg-light p-2">
+                      <div class="col-12 mb-3">
+                        <label for="music" class="form-label fw-semibold">
                           Favorite Music Genre
                         </label>
                         <select id="music" class="form-select">
@@ -144,35 +120,27 @@
                         </select>
                       </div>
                     </div>
-                    </div>
-                  
-                  
-                     <!-- TOWN -->
+                  </div>
+
+                  <!-- TOWN -->
                   <div class="container-fluid box mb-3">
                     <div class="row bg-light p-2">
                       <div class="col-12 mb-3">
                         <label for="town" class="form-label">
                           Town You Live In
                         </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="town"
-                        />
+                        <input type="text" class="form-control" id="town" />
                       </div>
                     </div>
                   </div>
 
-
-
-
-                  <button onclick="generatename()"
-                    type="submit"
+                  <button
+                    onclick="generateName()"
+                    
                     class="btn btn-light mt-4"
                   >
                     Generate
                   </button>
-
                 </form>
               </div>
             </div>
