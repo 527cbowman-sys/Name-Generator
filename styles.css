@@ -8,11 +8,12 @@ body {
     background-repeat: no-repeat;
     border-radius: 25px;
     transition: all 1s ease 0s;
+    margin-bottom: 8%;
 }
 
 .card:hover {
     transition: all 1s ease 0s;
-    box-shadow: 15px 15px 15px #ffc400;
+    box-shadow: 15px 15px 15px #e0ac01;
 }
 
 .card-title {
@@ -23,6 +24,25 @@ body {
     text-align: center
 }
 
+.form-label {
+    margin-left: 8%;
+    margin-top: 5%;
+    font-family: "sauna-swash-new", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 190%;
+}
+
+.options {
+    margin-left: 8%;
+    font-family: "sauna-swash-new", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 140%;
+}
+
+
+
 .box {
     border: 6px solid #1b1127;
     border-radius: 25px;
@@ -32,7 +52,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 6%;
+    margin-top: 6%;
     font-family: "la-parisienne-script-regular", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -48,7 +69,26 @@ body {
     color:#ffffff;
     background-color:#473064;
     box-shadow: 
-    0 0 10px #ffc400,
-    0 0 20px #ffc400,
-    0 0 30px #ffc400;
+    0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 30px #ffffff;
+    animation: bounce 1s;
+}
+
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
 }
