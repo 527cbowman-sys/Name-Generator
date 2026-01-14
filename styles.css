@@ -1,3 +1,10 @@
+html {
+    cursor: url("cursor.png"), auto;
+}
+:hover {
+    cursor: url("cursor.png"), auto;
+}
+
 body {
     background-color: #473064;
 }
@@ -13,7 +20,10 @@ body {
 
 .card:hover {
     transition: all 1s ease 0s;
-    box-shadow: 15px 15px 15px #e0ac01;
+    box-shadow: 
+    0 0 10px #e0ac01,
+    0 0 20px #e0ac01,
+    0 0 30px #e0ac01;
 }
 
 .card-title {
@@ -38,10 +48,31 @@ body {
     font-family: "sauna-swash-new", sans-serif;
     font-weight: 500;
     font-style: italic;
-    font-size: 140%;
+    font-size: 170%;
+}
+
+.form-control, .form-select, .form-check {
+  width: 80%;
+  margin-left: 8%;
+  font-family: "sauna-swash-new", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 160%;
 }
 
 
+.form-check-input:checked {
+    background-color: #6e5191;
+    border-color: #6e5191;
+    box-shadow: 0 0 8px #6e5191;
+}
+
+.end {
+  font-family: "sauna-swash-new", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 140%;
+}
 
 .box {
     border: 6px solid #1b1127;
@@ -68,13 +99,13 @@ body {
     transition: all 1s ease 0s;
     color:#ffffff;
     background-color:#473064;
+    border: 2px solid white;
     box-shadow: 
     0 0 10px #ffffff,
     0 0 20px #ffffff,
     0 0 30px #ffffff;
     animation: bounce 1s;
 }
-
 
 @keyframes bounce {
 	0%, 20%, 60%, 100% {

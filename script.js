@@ -1,13 +1,6 @@
-let prefix = "";
-let firstName = "";
-let middleName = "";
-let lastName = "";
-let suffix = "";
-
 function generateName() {
-
     const nameInput = document.getElementById("firstName").value;
-    const age = Number(document.getElementById("age").value);
+    const age = document.getElementById("age").value;
     const birthstone = document.getElementById("birthstone").value;
     const music = document.getElementById("music").value;
     const town = document.getElementById("town").value;
@@ -20,12 +13,24 @@ function generateName() {
     getLastName(music);
     getSuffix(town);
 
-    let royalName = `Your royal name is: ${prefix} ${firstName} ${middleName} ${lastName} of ${suffix}`;
-    
+    let royalName = `<span class="end"> <b>Your royal name is:</b>${prefix} ${firstName} ${middleName} ${lastName} of ${suffix}</span>`;
+
     document.getElementById("output").innerHTML = royalName;
     document.getElementById("formArea").style.display = "none";
     document.getElementById("againBtn").style.display = "inline-block";
+}
 
+function resetForm() {
+    document.getElementById("output").innerHTML = "";
+    document.getElementById("formArea").style.display = "block";
+    document.getElementById("againBtn").style.display = "none";
+    document.getElementById("royalForm").reset();
+
+    prefix = "";
+    firstName = "";
+    middleName = "";
+    lastName = "";
+    suffix = "";
 }
 
 function getPrefix(male, female, age) {

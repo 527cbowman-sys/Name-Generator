@@ -19,97 +19,143 @@
         <div class="row justify-content-center">
           <div class="col-12">
             <div class="card mt-4">
-              <div class="card-body text-center">
-                <h3 class="card-title mb-4">What's Your Royal Name?</h3>
+              <div class="card-body">
 
-                <div id="output" class="fs-4 fw-bold mb-4"></div>
-                <button
-                  id="againBtn"
-                  class="btn btn-secondary mb-3"
-                  style="display: none"
-                  onclick="resetForm()"
-                >
-                  Generate Again
-                </button>
+                <!-- Title -->
+                <h3 class="card-title mb-4 text-center">
+                  What's Your Royal Name?
+                </h3>
 
-                <div id="formArea">
-                  <form>
-                    <!-- Gender -->
-                    <div class="mb-3 text-start">
-                      <label class="form-label">Gender</label>
-                      <br>
-                      <input type="radio" id="genderMale" name="gender"/>
-                      <label for="genderMale" class="options">Male</label>
-                      <br>
-                      <input type="radio" id="genderFemale" name="gender"/>
-                      <label for="genderFemale" class="options">Female</label>
-                    </div>
+                <!-- Output -->
+                <div
+                  id="output"
+                  class="fs-4 fw-bold mb-4 text-center"
+                ></div>
 
-                    <!-- Age -->
-                    <div class="mb-3 text-start">
-                      <label class="form-label">Age</label>
-                      <input
-                        type="number"
-                        id="age"
-                        class="form-control options"/>
-                    </div>
-
-                    <!-- Name -->
-                    <div class="mb-3 text-start">
-                      <label class="form-label">Your Name</label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        class="form-control options"/>
-                    </div>
-
-                    <!-- Birthstone -->
-                    <div class="mb-3 text-start">
-                      <label class="form-label">Birthstone</label>
-                      <select id="birthstone" class="form-select">
-                        <option class="options" value="">Choose</option>
-                        <option class="options" value="garnet">Garnet</option>
-                        <option class="options" value="amethyst">Amethyst</option>
-                        <option class="options" value="aquamarine">Aquamarine</option>
-                        <option class="options" value="diamond">Diamond</option>
-                        <option class="options" value="emerald">Emerald</option>
-                        <option class="options" value="pearl">Pearl</option>
-                        <option class="options" value="ruby">Ruby</option>
-                        <option class="options" value="peridot">Peridot</option>
-                        <option class="options" value="sapphire">Sapphire</option>
-                        <option class="options" value="opal">Opal</option>
-                        <option class="options" value="topaz">Topaz</option>
-                        <option class="options" value="turquoise">Turquoise</option>
-                      </select>
-                    </div>
-
-                    <!-- Music -->
-                    <div class="mb-3 text-start">
-                      <label class="form-label">Favorite Music</label>
-                      <select id="music" class="form-select">
-                        <option class="options" value="">Choose</option>
-                        <option class="options" value="rock">Rock</option>
-                        <option class="options" value="pop">Pop</option>
-                        <option class="options" value="country">Country</option>
-                        <option class="options" value="rap">Rap</option>
-                        <option class="options" value="classical">Classical</option>
-                      </select>
-                    </div>
-
-                    <!-- Town -->
-                    <div class="mb-3 text-start">
-                      <label class="form-label">Town</label>
-                      <input
-                        type="text"
-                        id="town"
-                        class="form-control options"/>
-                    </div>
-
-                    <button type="button" onclick="generateName()" class="btn">
-                      Generate Royal Name
-                    </button>
-                  </form>
+                <!-- Generate Again Button -->
+                <div class="text-center">
+                  <button
+                    id="againBtn"
+                    class="btn btn-secondary mb-3"
+                    style="display: none"
+                    onclick="resetForm()"
+                  >
+                    Generate Again
+                  </button>
                 </div>
+
+                <!-- Form Wrapper -->
+                <div id="formArea">
+                  <div class="form-wrapper">
+                    <form id="royalForm">
+
+                      <!-- Gender -->
+                      <div class="mb-3">
+                        <label class="form-label">Gender</label>
+
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="genderMale"
+                          />
+                          <label class="form-check-label" for="genderMale">
+                            Male
+                          </label>
+                        </div>
+
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="genderFemale"
+                          />
+                          <label class="form-check-label" for="genderFemale">
+                            Female
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Age -->
+                      <div class="mb-3">
+                        <label class="form-label">Age</label>
+                        <input
+                          type="number"
+                          id="age"
+                          class="form-control options"
+                        />
+                      </div>
+
+                      <!-- Name -->
+                      <div class="mb-3">
+                        <label class="form-label">Your Name</label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          class="form-control options"
+                        />
+                      </div>
+
+                      <!-- Birthstone -->
+                      <div class="mb-3">
+                        <label class="form-label">Birthstone</label>
+                        <select id="birthstone" class="form-select">
+                          <option value="">Choose</option>
+                          <option value="garnet">Garnet</option>
+                          <option value="amethyst">Amethyst</option>
+                          <option value="aquamarine">Aquamarine</option>
+                          <option value="diamond">Diamond</option>
+                          <option value="emerald">Emerald</option>
+                          <option value="pearl">Pearl</option>
+                          <option value="ruby">Ruby</option>
+                          <option value="peridot">Peridot</option>
+                          <option value="sapphire">Sapphire</option>
+                          <option value="opal">Opal</option>
+                          <option value="topaz">Topaz</option>
+                          <option value="turquoise">Turquoise</option>
+                        </select>
+                      </div>
+
+                      <!-- Music -->
+                      <div class="mb-3">
+                        <label class="form-label">Favorite Music</label>
+                        <select id="music" class="form-select">
+                          <option value="">Choose</option>
+                          <option value="rock">Rock</option>
+                          <option value="pop">Pop</option>
+                          <option value="country">Country</option>
+                          <option value="rap">Rap</option>
+                          <option value="classical">Classical</option>
+                        </select>
+                      </div>
+
+                      <!-- Town -->
+                      <div class="mb-3">
+                        <label class="form-label">Town</label>
+                        <input
+                          type="text"
+                          id="town"
+                          class="form-control options"
+                        />
+                      </div>
+
+                      <!-- Submit -->
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          onclick="generateName()"
+                          class="btn btn-primary"
+                        >
+                          Generate Royal Name
+                        </button>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
