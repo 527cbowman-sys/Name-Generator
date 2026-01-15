@@ -45,100 +45,108 @@
                 </div>
 
                 <!-- Form Wrapper -->
-                <div id="formArea">
-                  <div class="form-wrapper">
-                    <form id="royalForm">
+                                   <form id="royalForm">
 
-                      <!-- Gender -->
-                      <div class="mb-3">
-                        <label class="form-label">Gender</label>
-
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="gender"
-                            id="genderMale"
-                          />
-                          <label class="form-check-label" for="genderMale">
-                            Male
-                          </label>
+                      <!-- Row 1: Gender and Age -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label class="form-label">Gender</label>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="genderMale"
+                              />
+                              <label class="form-check-label" for="genderMale">
+                                Male
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="genderFemale"
+                              />
+                              <label class="form-check-label" for="genderFemale">
+                                Female
+                              </label>
+                            </div>
+                          </div>
                         </div>
-
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="gender"
-                            id="genderFemale"
-                          />
-                          <label class="form-check-label" for="genderFemale">
-                            Female
-                          </label>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label class="form-label">Age</label>
+                            <input
+                              type="number"
+                              id="age"
+                              class="form-control options"
+                            />
+                          </div>
                         </div>
                       </div>
 
-                      <!-- Age -->
-                      <div class="mb-3">
-                        <label class="form-label">Age</label>
-                        <input
-                          type="number"
-                          id="age"
-                          class="form-control options"
-                        />
+                      <!-- Row 2: Name and Birthstone -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input
+                              type="text"
+                              id="firstName"
+                              class="form-control options"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label class="form-label">Birthstone</label>
+                            <select id="birthstone" class="form-select">
+                              <option value="">Choose</option>
+                              <option value="garnet">Garnet</option>
+                              <option value="amethyst">Amethyst</option>
+                              <option value="aquamarine">Aquamarine</option>
+                              <option value="diamond">Diamond</option>
+                              <option value="emerald">Emerald</option>
+                              <option value="pearl">Pearl</option>
+                              <option value="ruby">Ruby</option>
+                              <option value="peridot">Peridot</option>
+                              <option value="sapphire">Sapphire</option>
+                              <option value="opal">Opal</option>
+                              <option value="topaz">Topaz</option>
+                              <option value="turquoise">Turquoise</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
 
-                      <!-- Name -->
-                      <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input
-                          type="text"
-                          id="firstName"
-                          class="form-control options"
-                        />
-                      </div>
-
-                      <!-- Birthstone -->
-                      <div class="mb-3">
-                        <label class="form-label">Birthstone</label>
-                        <select id="birthstone" class="form-select">
-                          <option value="">Choose</option>
-                          <option value="garnet">Garnet</option>
-                          <option value="amethyst">Amethyst</option>
-                          <option value="aquamarine">Aquamarine</option>
-                          <option value="diamond">Diamond</option>
-                          <option value="emerald">Emerald</option>
-                          <option value="pearl">Pearl</option>
-                          <option value="ruby">Ruby</option>
-                          <option value="peridot">Peridot</option>
-                          <option value="sapphire">Sapphire</option>
-                          <option value="opal">Opal</option>
-                          <option value="topaz">Topaz</option>
-                          <option value="turquoise">Turquoise</option>
-                        </select>
-                      </div>
-
-                      <!-- Music -->
-                      <div class="mb-3">
-                        <label class="form-label">Favorite Music</label>
-                        <select id="music" class="form-select">
-                          <option value="">Choose</option>
-                          <option value="rock">Rock</option>
-                          <option value="pop">Pop</option>
-                          <option value="country">Country</option>
-                          <option value="rap">Rap</option>
-                          <option value="classical">Classical</option>
-                        </select>
-                      </div>
-
-                      <!-- Town -->
-                      <div class="mb-3">
-                        <label class="form-label">Town</label>
-                        <input
-                          type="text"
-                          id="town"
-                          class="form-control options"
-                        />
+                      <!-- Row 3: Music and Town -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label class="form-label">Favorite Music</label>
+                            <select id="music" class="form-select">
+                              <option value="">Choose</option>
+                              <option value="rock">Rock</option>
+                              <option value="pop">Pop</option>
+                              <option value="country">Country</option>
+                              <option value="rap">Rap</option>
+                              <option value="classical">Classical</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label class="form-label">Town</label>
+                            <input
+                              type="text"
+                              id="town"
+                              class="form-control options"
+                            />
+                          </div>
+                        </div>
                       </div>
 
                       <!-- Submit -->
@@ -153,8 +161,6 @@
                       </div>
 
                     </form>
-                  </div>
-                </div>
 
               </div>
             </div>
